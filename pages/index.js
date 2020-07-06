@@ -1,5 +1,5 @@
 const Index = () => (
-  <div>hoge</div>
+  <div>Hello Next.js</div>
 );
 
 export default Index;
