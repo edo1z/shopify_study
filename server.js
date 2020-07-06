@@ -1,7 +1,12 @@
+const dotenv = require('dotenv');
+dotenv.config();
 const Koa = require('koa');
 const Router = require('koa-router');
 const next = require('next');
-const app = next({dev:true});
+
+const port = parseInt(process.env.PORT, 10) || 3000;
+const dev = process.env.NODE_ENV !== 'production';
+const app = next({ dev });
 const handle = app.getRequestHandler();
 
 app.prepare().then(() => {
@@ -14,7 +19,7 @@ app.prepare().then(() => {
   });
   server.use(router.allowedMethods());
   server.use(router.routes());
-  server.listen(3000, () => console.log('> Ready on http://localhost:3000'));
+  server.listen(port, () => console.log(`> Ready on http://localhost:${port}`));
 }).catch(err => {
   console.log('error!', err);
 });
