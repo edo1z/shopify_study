@@ -12,11 +12,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@shopify/polaris": "^4.26.1",
     "dotenv": "^8.2.0",
     "koa": "^2.13.0",
     "koa-router": "^9.1.0",
     "next": "^9.4.4",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "sass": "^1.26.10"
   }
 }
